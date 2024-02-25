@@ -1,0 +1,10 @@
+var isSameTree = function(p, q) {
+    if(p===null && q===null) return true;
+    if(p===null || q===null || p.val!==q.val) return false;
+    return isSameTree(p.left,q.left) && isSameTree(p.right,q.right);
+};
+// Approach
+// check if there is any nodes, if no return true
+// check if left left is identical with right
+// we will go down the tree1 and tree 2 and if the number does not match or null return false
+//will be using recursion to check both binary tree to see if they are identical by checking the root nodes
